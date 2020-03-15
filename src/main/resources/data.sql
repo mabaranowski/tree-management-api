@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS NODE;
+
+CREATE TABLE NODE (
+  keyid VARCHAR(50) PRIMARY KEY,
+  nodevalue NUMBER(16),
+  childnodeid VARCHAR(50),
+  parentnodeid VARCHAR(50),
+  expanded BOOLEAN DEFAULT TRUE
+);
