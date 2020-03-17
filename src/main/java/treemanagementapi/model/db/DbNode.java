@@ -1,7 +1,5 @@
 package treemanagementapi.model.db;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,7 +7,7 @@ import javax.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name = "tb_node")
 public class DbNode {
 
     @Id
@@ -19,13 +17,7 @@ public class DbNode {
     @Column(name = "nodevalue")
     private Long value;
 
-    @Column(name = "childnodeid")
-    private List<DbNode> children;
-
     @Column(name = "parentnodeid")
-    private DbNode parentNode;
-
-    @Column(name = "expanded")
-    private Boolean expanded;
-
+    private String parent;
+    
 }
