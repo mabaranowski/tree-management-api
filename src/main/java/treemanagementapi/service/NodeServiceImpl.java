@@ -32,14 +32,14 @@ public class NodeServiceImpl implements NodeService {
     }
 
     @Override
-    public void saveTree(final List<Node> nodeTreeList) {
+    public List<DbNode> saveTree(final List<Node> nodeTreeList) {
         final List<DbNode> inputNodeList = nodeTreeList
         .stream()
         .map(t -> this.nodeMapper.mapNodeToDbNode(t))
         .collect(Collectors.toList());
 
         this.nodeRepo.deleteAll();
-        this.nodeRepo.saveAll(inputNodeList);
+        return this.nodeRepo.saveAll(inputNodeList);
     }
 
 }

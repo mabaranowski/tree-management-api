@@ -6,7 +6,9 @@ import lombok.Data;
 public class Node {
 
     private String key;
+
     private Long value;
+    
     private String parent;
 
 }
