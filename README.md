@@ -12,6 +12,7 @@ For a client side, go to [tree-management-web](https://github.com/mabaranowski/t
 To deploy full-stack app, start with tree-management-web project.
 Make sure both tree-management-api and tree-management-web are in the same directory.
 After running ng build in tree-management-web, start server with ./mvnw spring-boot:run.
+App will be available on port 8080. 
 
 ## Running
 ```
